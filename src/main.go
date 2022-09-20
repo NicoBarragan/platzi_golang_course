@@ -11,8 +11,20 @@ func main() {
 	const pi float64 = 3.14
 	const pi2 = 3.1415
 
+	// Println is a print with a line jump
 	fmt.Println("pi: ", pi)
 	fmt.Println("pi2: ", pi2)
+
+	// Printf
+	name := "Platzi"
+	courses := 500
+	fmt.Printf("%s has more than %d courses\n", name, courses) //%s: string %v: int
+	// or with %v when we don't know the type (avoid if possible)
+	fmt.Printf("%v has more than %v courses\n", name, courses) //%v: no type spec
+
+	// Sprintf -> generates a msg but it saves on a variable and it doesnt print on console
+	message := fmt.Sprintf("%s has more than %d courses", name, courses)
+	fmt.Println(message)
 
 	// int variables
 	// for creating and assigning a value to a new var
@@ -46,69 +58,7 @@ func main() {
 	 *   )
 	 * fmt.Println(reflect.TypeOf(myValue))
 	 */
-	// or
-	/* fmt.Printf(" The type of my value is %T", myValue) */
-
-	// Calculate the area of square
-	const squareBase = 10
-	squareArea := squareBase * squareBase
-	fmt.Println("Square area: ", squareArea)
-
-	/* Aritmetic operators */
-	// Sum
-	x := 10
-	y := 50
-
-	result := x + y
-	fmt.Println("Sum: ", result)
-
-	// Substraction
-	result = y - x // we are reasigning a declared var so the ':' are not necessary
-	fmt.Println("Sub: ", result)
-
-	// Multiplication
-	result = x * y
-	fmt.Println("Mul: ", result)
-
-	// Division
-	result = y / x
-	fmt.Println("Div: ", result)
-
-	// Module
-	result = y % x
-	fmt.Println("Mod: ", result) // 0
-
-	result2 := x % y
-	fmt.Println("Mod 2: ", result2) // 10
-
-	// Incremental
-	x++
-	fmt.Println("Incremental: ", x) // 11
-
-	// Decremental
-	x--
-	fmt.Println("Incremental: ", x) // 10
-
-	// Calculate rectangle area
-	recBase := 10
-	recHeight := 5
-
-	recArea := recBase * recHeight
-	fmt.Println("RecArea: ", recArea)
-
-	// Calculate trapeze area
-	trapBaseZero := 12
-	trapBaseOne := 17
-	trapHeight := 10
-
-	trapArea := trapHeight / 2 * (trapBaseOne + trapBaseZero)
-	fmt.Println("trapArea: ", trapArea)
-
-	// Calculate circle area
-	circleDiam := 50
-	circleRadio := float64(circleDiam / 2)
-	const PI float64 = 3.14
-	circleArea := circleRadio * circleRadio * PI
-
-	fmt.Println("circleArea: ", circleArea)
+	// or with the '%T' on format print
+	myValue := 20
+	fmt.Printf("The type of my value is %T\n", myValue)
 }
