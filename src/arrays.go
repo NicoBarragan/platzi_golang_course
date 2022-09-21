@@ -1,6 +1,29 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"strings"
+)
+
+func isPalindrome(text string) string {
+	var reverseText string
+
+	// iterate from the final to the start the text
+	for i := len(text) - 1; i >= 0; i-- {
+		reverseText += strings.ToLower(string(text[i]))
+		// Why do we parse text[i] with string()? Because an string is a characters list that compresses into ASCII
+		// when we pick only an element, we will get uint8 (ASCII) as type, and we need it to be a string
+	}
+
+	// Only for learning purposes:
+	fmt.Printf("Type of a character of text[0]: %T\n", text[0])
+
+	if reverseText == strings.ToLower(text) {
+		return "Is Palindrome"
+	}
+
+	return "Is not Palindrome"
+}
 
 func main() {
 	// Array (fixed)
@@ -43,5 +66,27 @@ func main() {
 	childSlice := slice[:5]
 	fmt.Printf("The len of childSlice is %d | The cap of childSlice is %d\n", len(childSlice), cap(childSlice))
 	fmt.Printf("The len of slice is %d | The cap of slice is %d\n", len(slice), cap(slice))
+
+	/* Range */
+	// The range keyword is used in for loop to iterate over items of an array, slice, channel or map.
+	// With array and slices, it returns the index of the item as integer.
+	// starts from 0 and ends in len
+	for i := range slice {
+		fmt.Println("Item", i, "is equal to", slice[i])
+	}
+
+	// With maps, it returns the key of the next key-value pair. Range either returns one value or two.
+	// define map to iterate:
+	capitalsMap := map[string]string{"Argentina": "Buenos Aires", "Uruguay": "Montevideo"}
+
+	//  If only one value is used on the left of a range expression, it is the 1st value in the following table.
+	for country, capital := range capitalsMap {
+		fmt.Printf("%s is the capital of %s\n", country, capital)
+	}
+
+	// Palindrome
+	fmt.Printf("\n-------------\nPalindrome:\n")
+	fmt.Println(isPalindrome("AMa"))
+	fmt.Println(isPalindrome("AMar azul"))
 
 }
