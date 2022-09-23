@@ -15,7 +15,7 @@ func circleArea(ratio float64) float64 {
 	return PI * (ratio * ratio)
 }
 
-func main() {
+func aritmetic() {
 	/* Aritmetic operators */
 	// Sum
 	x := 10

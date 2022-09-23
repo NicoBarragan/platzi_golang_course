@@ -19,7 +19,7 @@ func (myPC *pc) updateRAM(newRam int) {
 	myPC.ram = newRam
 }
 
-func main() {
+func pointers() {
 
 	// The compiler saves a memory direction to a variable with a value
 	a := 50

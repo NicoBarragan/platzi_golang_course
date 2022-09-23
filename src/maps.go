@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func main() {
+func maps() {
 	// the keyword 'make' is usful when declaring variables
 	ageMap := make(map[string]int)
 

@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func main() {
+func switchs() {
 	// For a var without too many conditions this is the best option
 	switch module := 5 % 2; module {
 	case 0:

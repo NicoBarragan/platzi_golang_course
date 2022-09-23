@@ -25,7 +25,7 @@ func isPalindrome(text string) string {
 	return "Is not Palindrome"
 }
 
-func main() {
+func arrays() {
 	// Array (fixed)
 	var array [4]int
 	array[0] = 1

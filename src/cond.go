@@ -19,7 +19,7 @@ func login(userName, pass string) bool {
 	return userName == "user" && pass == "password"
 }
 
-func main() {
+func cond() {
 	valor1 := 2
 
 	if valor1 == 1 {

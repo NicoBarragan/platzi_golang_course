@@ -28,7 +28,7 @@ func (trian triangle) area() float64 {
 	return trian.base * trian.height
 }
 
-func main() {
+func interfaces() {
 	mySquare := square{base: 2}
 	myTriangle := triangle{base: 2, height: 3}
 

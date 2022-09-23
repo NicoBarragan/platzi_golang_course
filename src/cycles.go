@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func main() {
+func cycles() {
 
 	// For conditional
 	for i := 0; i <= 10; i++ {

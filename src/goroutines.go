@@ -18,7 +18,7 @@ func channelSay(text string, channel chan string) {
 	channel <- text
 }
 
-func main() {
+func goroutines() {
 	// One way for managing the Goroutines is with WaitGroup
 	// sync pkg interacts with Goroutines in a primitive way, so is efficient
 	var wg sync.WaitGroup // Most efficient way, but most complex for mantaining

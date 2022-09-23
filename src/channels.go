@@ -7,7 +7,7 @@ func message(text string, c chan string) {
 	c <- text
 }
 
-func main() {
+func channels() {
 	// make(type, maxCapacity)
 	c := make(chan string, 2)
 

@@ -21,7 +21,7 @@ func doubleReturn(a int) (c, d int) {
 	return a, a * 2
 }
 
-func main() {
+func funcs() {
 	normalFunc("Nico")
 	tripleArgument(1, 2, "jaja")
 

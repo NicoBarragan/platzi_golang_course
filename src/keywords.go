@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func main() {
+func keywords() {
 	// Defer: Executes a line before the func dies
 	// It makes like an offset and executes it after all of the lines in the func
 	defer fmt.Println("Hello")

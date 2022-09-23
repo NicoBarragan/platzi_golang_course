@@ -18,7 +18,7 @@ func (car car) String() string {
 	return fmt.Sprintf("My car is a %s %s, from %d with %d seats", car.color, car.brand, car.year, car.seating)
 }
 
-func main() {
+func structs() {
 	// create an instance of a struct
 	myCar := car{brand: "Ford", year: 2020, seating: 4}
 	fmt.Println("myCar: ", myCar)
