@@ -3,6 +3,8 @@ package main
 // if we don't use the library anymore, it will automatically remove
 import (
 	"fmt"
+
+	"github.com/NicoBarragan/curso_golang_platzi/pkg/language"
 )
 
 func main() {
@@ -61,4 +63,10 @@ func main() {
 	// or with the '%T' on format print
 	myValue := 20
 	fmt.Printf("The type of my value is %T\n", myValue)
+
+	publicCar := language.CarPublic{Brand: "Ford"}
+
+	fmt.Println(publicCar)
+
+	// TODO(nb): add server
 }
